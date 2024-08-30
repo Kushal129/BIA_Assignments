@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Fragmentation and Reassembly</title>
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700 flex-wrap">
+            <li><a href="../../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 2 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 2.2</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Assignment 2.2.2</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                IP Fragmentation and Reassembly
+            </div>
+            <div class="p-6">
+                <h2 class="text-2xl font-semibold mb-4">What is IP Fragmentation?</h2>
+                <p class="mb-4">
+                    IP Fragmentation is the process of <span class="font-semibold">breaking down large packets into
+                        smaller</span> fragments to comply with
+                    the Maximum Transmission Unit (MTU) of a network. Each fragment is sent separately and then
+                    reassembled at the destination to recreate the original packet.
+                </p>
+
+                <h3 class="text-xl font-semibold mb-2">How Fragmentation Works</h3>
+                <ul class="list-disc ml-5 mb-4">
+                    <li><strong>Initial Packet Size and MTU(Maximum transfer unit):</strong> Packets larger than the MTU
+                        are divided into smaller fragments.</li>
+                    <li><strong>Fragmentation by the Sender:</strong> Large packets are segmented into fragments before
+                        sending.</li>
+                    <li><strong>Fragmentation by Routers:</strong> Routers may further fragment packets if needed based
+                        on network constraints.</li>
+                    <li><strong>Reassembly at the Destination:</strong> Fragments are reassembled into the original
+                        packet at the destination.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mb-2">Challenges of IP Fragmentation</h3>
+                <ul class="list-disc ml-5 mb-4">
+                    <li><strong>Packet Loss:</strong> Loss of any fragment results in the need to retransmit the entire
+                        packet.</li>
+                    <li><strong>Reassembly Overhead:</strong> Additional processing is required to reassemble fragments
+                        at the destination.</li>
+                    <li><strong>Fragmentation Attacks:</strong> Attackers may use fragmentation to evade detection
+                        systems.</li>
+                    <li><strong>Increased Overhead:</strong> Each fragment has its own header, increasing the total
+                        overhead.</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mb-2">Strategies for Optimization</h3>
+                <ul class="list-disc ml-5">
+                    <li><strong>Path MTU Discovery:</strong> Identify the smallest MTU along the network path to prevent
+                        fragmentation.</li>
+                    <li><strong>Avoid Fragmentation:</strong> Design applications to create packets that are smaller
+                        than the MTU.</li>
+                    <li><strong>Optimize Fragmentation:</strong> Use efficient algorithms for determining fragment size
+                        and reassembly.</li>
+                    <li><strong>Use of Security Measures:</strong> Implement security measures such as IPsec to protect
+                        against fragmentation attacks.</li>
+                    <li><strong>Network Configuration:</strong> Ensure consistent MTU settings across all network
+                        devices.</li>
+                    <li><strong>Monitoring and Analysis:</strong> Regularly monitor network performance to identify and
+                        address fragmentation issues.</li>
+                </ul>
+
+                <div class="bg-gray-800 text-white p-4 rounded-lg mt-8">
+                    <h4 class="text-xl font-semibold mb-2">Example: Packet Size Handling</h4>
+
+                    <div class="bg-gray-900 p-4 rounded-lg mb-4">
+                        <p class="text-green-400 mb-2"># Success: Ping with a packet size that is within typical MTU
+                            limits</p>
+                        <p class="text-green-400">ping -l 1200 google.com</p>
+                    </div>
+
+                    <p class="mt-2">
+                        <strong>Output:</strong>
+                    </p>
+
+                    <div class="bg-gray-900 p-4 rounded-lg mb-4">
+                        <p class="text-green-400 mb-2">Pinging google.com [142.250.74.142] with 1200 bytes of data:</p>
+                        <p class="text-green-400">Reply from 142.250.74.142: bytes=1200 time=30ms TTL=115</p>
+                        <p class="text-green-400">Reply from 142.250.74.142: bytes=1200 time=29ms TTL=115</p>
+                        <p class="text-green-400">Reply from 142.250.74.142: bytes=1200 time=31ms TTL=115</p>
+                        <p class="text-green-400">Reply from 142.250.74.142: bytes=1200 time=30ms TTL=115</p>
+                        <p class="text-green-400 mt-2">Ping statistics for 142.250.74.142:</p>
+                        <p class="text-green-400">Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),</p>
+                    </div>
+
+                    <p class="mt-2">
+                        <strong>Explanation:</strong> The command <code
+                            class="text-green-400">ping -l 1200 google.com</code>
+                        sends a ping request with a packet size of 1200 bytes. Since this size is within typical MTU
+                        limits, you
+                        receive replies from the server, indicating successful transmission of the packet.
+                    </p>
+
+                    <div class="bg-gray-900 p-4 rounded-lg mt-6 mb-4">
+                        <p class="text-red-400 mb-2"># Error: Ping with a packet size that exceeds typical MTU limits
+                        </p>
+                        <p class="text-red-400">ping -l 65500 google.com</p>
+                    </div>
+
+                    <p class="mt-2">
+                        <strong>Output:</strong>
+                    </p>
+
+                    <div class="bg-gray-900 p-4 rounded-lg mb-4">
+                        <p class="text-red-400 mb-2">Pinging google.com [142.250.74.142] with 65500 bytes of data:</p>
+                        <p class="text-red-400">Request timed out.</p>
+                        <p class="text-red-400">Request timed out.</p>
+                        <p class="text-red-400">Request timed out.</p>
+                        <p class="text-red-400">Request timed out.</p>
+                        <p class="text-red-400 mt-2">Ping statistics for 142.250.74.142:</p>
+                        <p class="text-red-400">Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),</p>
+                    </div>
+
+                    <p class="mt-2">
+                        <strong>Explanation:</strong> The command <code
+                            class="text-green-400">ping -l 65500 google.com</code>
+                        sends a ping request with a packet size of 65500 bytes, which is significantly larger than
+                        typical MTU limits.
+                        This usually results in the packets being dropped or timing out, as the network cannot handle
+                        such large packets.
+                        This output demonstrates how networks handle packets that exceed their MTU limits, showing
+                        "Request timed out"
+                        errors.
+                    </p>
+                </div>
+
+
+                <div class="bg-gray-800 text-white p-4 rounded-lg mt-8">
+                    <h4 class="text-xl font-semibold mb-2">Reassembly Concept</h4>
+
+                    <div class="bg-gray-900 p-4 rounded-lg mb-4">
+                        <p class="text-green-400 mb-2"># Reassembly of IP fragments</p>
+                        <p class="text-green-400 mb-2"># Assume we have the following fragments:</p>
+                        <p class="text-green-400 mb-2"># Fragment 1: 1000 bytes</p>
+                        <p class="text-green-400 mb-2"># Fragment 2: 1500 bytes</p>
+                        <p class="text-green-400 mb-2"># Fragment 3: 1200 bytes</p>
+                        <p class="text-green-400 mb-2"># Total packet size: 3700 bytes</p>
+                        <p class="text-green-400 mb-2"># Reassembly process at the destination:</p>
+                        <p class="text-green-400"># Fragments are collected and reordered</p>
+                        <p class="text-green-400"># The original packet is reconstructed from these fragments</p>
+                    </div>
+
+                    <p class="mt-2">
+                        <strong>Explanation:</strong> When a large packet is broken into fragments, each fragment
+                        contains a portion of the original packet along with some additional information for reassembly.
+                        At the destination, these fragments are collected and reordered based on their sequence
+                        information. The original packet is then reconstructed from these fragments. This process
+                        ensures that the
+                        data is correctly reassembled even if it was sent in multiple smaller pieces.
+                    </p>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

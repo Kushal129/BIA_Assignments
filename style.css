@@ -1,0 +1,45 @@
+/* Selection Color */
+::selection {
+    background-color: #4c1d95 !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 4px;
+
+    height: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #4c1d95;
+
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #d3c9e300;
+
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #4c1d95;
+
+}
+
+#toast-simple {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}

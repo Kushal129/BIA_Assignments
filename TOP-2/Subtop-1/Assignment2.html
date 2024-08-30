@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2.1.2: TCP vs UDP Analysis</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 2 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 2.1</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Assignment 2.1.2</span></li>
+        </ol>
+    </nav>
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Assignment 2.1.2
+            </div>
+            <div class="p-6 md:p-8">
+                <h1 class="text-2xl font-bold mb-4 md:text-3xl text-center">TCP vs UDP: Key Differences</h1>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold mb-4 md:text-2xl text-gray-800">TCP (Transmission Control Protocol)
+                    </h2>
+                    <p class="mb-4 text-base md:text-lg text-gray-700">
+                        <strong>Characteristics:</strong>
+                    </p>
+                    <ul class="list-disc list-inside mb-4 text-base md:text-lg text-gray-700">
+                        <li><strong>Connection-Oriented:</strong> Establishes a connection before data transfer.</li>
+                        <li><strong>Reliable:</strong> Ensures data is delivered accurately and in order.</li>
+                        <li><strong>Higher Overhead:</strong> Due to error checking and connection management.</li>
+                    </ul>
+                    <p class="mb-4 text-base md:text-lg text-gray-700">
+                        <strong>Example Scenario:</strong> Suitable for applications where data accuracy is critical,
+                        like
+                        sending emails or transferring files.
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-xl font-semibold mb-4 md:text-2xl text-gray-800">UDP (User Datagram Protocol)</h2>
+                    <p class="mb-4 text-base md:text-lg text-gray-700">
+                        <strong>Characteristics:</strong>
+                    </p>
+                    <ul class="list-disc list-inside mb-4 text-base md:text-lg text-gray-700">
+                        <li><strong>Connectionless:</strong> Sends data without establishing a connection.</li>
+                        <li><strong>Unreliable:</strong> No guarantee of data delivery or order.</li>
+                        <li><strong>Lower Overhead:</strong> Less data is sent with each packet, making it faster.</li>
+                    </ul>
+                    <p class="mb-4 text-base md:text-lg text-gray-700">
+                        <strong>Example Scenario:</strong> Ideal for applications where speed is more important than
+                        accuracy, like streaming videos or online gaming.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold mb-4 md:text-2xl text-gray-800">Summary</h2>
+                    <p class="mb-4 text-base md:text-lg text-gray-700">
+                        <strong>TCP:</strong> Use when you need reliable communication and can tolerate some overhead.
+                        Examples: Web browsing, email.
+                    </p>
+                    <p class="mb-4 text-base md:text-lg text-gray-700">
+                        <strong>UDP:</strong> Use when speed is crucial and occasional data loss is acceptable.
+                        Examples:
+                        Video calls, live streaming.
+                    </p>
+                </section>
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+
+</body>
+
+</html>

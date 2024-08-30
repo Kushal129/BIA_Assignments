@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.3.1: Windows Registry Analysis</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 3 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 3.3</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Windows Registry Analysis</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Windows Registry Analysis
+            </div>
+            <div class="p-8">
+                <p class="mb-2">The Windows Registry is a simple database that stores and saves Windows settings and
+                    software configurations. It holds information about system hardware, installed programs, user
+                    preferences, and other settings that help Windows and applications function properly.</p>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">1. Navigating the Windows Registry</h1>
+                    <p class="mb-4">To explore the Windows Registry, you can use:</p>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>Registry Editor (regedit):</strong> Open by typing <code>regedit</code> in the Run
+                            dialog
+                            (press <code>Win + R</code> to open it). This tool allows you to view and edit registry keys
+                            and
+                            values.</li>
+                        <li><strong>PowerShell:</strong> Use PowerShell commands to query and modify the registry. For
+                            example,
+                            you can use <code>Get-ItemProperty</code> to view registry values.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">2. Identifying Important Registry Keys</h1>
+
+                    <h2 class="text-xl font-semibold mb-2">Key Sections</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>HKEY_CLASSES_ROOT (HKCR):</strong> Contains information about file associations and
+                            COM
+                            objects. It helps Windows know which program to use to open different file types.</li>
+
+                        <li><strong>HKEY_CURRENT_USER (HKCU):</strong> Stores settings specific to the currently
+                            logged-in
+                            user, such as desktop background, application preferences, and keyboard settings.</li>
+
+                        <li><strong>HKEY_LOCAL_MACHINE (HKLM):</strong> Contains system-wide settings and configurations
+                            that apply to all users on the computer, including installed software, drivers, and security
+                            settings.</li>
+
+                        <li><strong>HKEY_USERS (HKU):</strong> Stores user-specific information for all user accounts on
+                            the
+                            system. It includes settings for users who are not currently logged in.</li>
+
+                        <li><strong>HKEY_CURRENT_CONFIG (HKCC):</strong> Contains information about the current hardware
+                            configuration, such as display settings and printer settings. It helps Windows apply the
+                            correct
+                            settings based on the hardware in use.</li>
+                    </ul>
+
+                    <h2 class="text-xl font-semibold mb-2">Example Documentation</h2>
+                    <p class="mb-4"><strong>Path:</strong>
+                        <span>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</span>
+                    </p>
+                    <p class="mb-4"><strong>Description:</strong> Stores the list of programs that automatically start
+                        when
+                        Windows boots up. You can use this to manage startup applications.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Practical PowerShell Commands</h2>
+                    <p class="mb-4">You can interact with the Windows Registry using PowerShell. Here are some useful
+                        commands:</p>
+
+                    <h3 class="text-lg font-semibold mb-2">1. Viewing a Registry Key</h3>
+                    <p class="mb-4">To view the contents of a registry key, use the following command:</p>
+                    <div class="bg-gray-100 p-4 rounded">
+                        <code>Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"</code>
+                    </div>
+                    <p class="mt-2">This command shows all the startup programs in the specified registry key.</p>
+
+                    <h3 class="text-lg font-semibold mb-2">2. Adding a New Value to a Registry Key</h3>
+                    <p class="mb-4">To add a new value to a registry key, use this command:</p>
+                    <div class="bg-gray-100 p-4 rounded">
+                        <code>Set-ItemProperty -Path "HKCU:\Software\MyApp" -Name "NewSetting" -Value "MyValue"</code>
+                    </div>
+                    <p class="mt-2">This command creates a new setting called "NewSetting" with the value "MyValue" in
+                        the
+                        "MyApp" key under HKEY_CURRENT_USER.</p>
+
+                    <h3 class="text-lg font-semibold mb-2">3. Monitoring Registry Changes</h3>
+                    <p class="mb-4">To monitor changes to the registry, you can use the following command:</p>
+                    <div class="bg-gray-100 p-4 rounded">
+                        <code>Register-WmiEvent -Class Win32_RegistryTreeChangeEvent -SourceIdentifier "RegistryChange" -Action { Write-Host "Registry change detected!" }</code>
+                    </div>
+                    <p class="mt-2">This command sets up an event that alerts you whenever a change is detected in the
+                        registry.</p>
+
+                    <h3 class="text-lg font-semibold mb-2">Running the Commands</h3>
+                    <p class="mb-4">To run these commands, open PowerShell as an administrator. You can do this by
+                        searching
+                        for "PowerShell" in the Start menu, right-clicking on it, and selecting "Run as administrator."
+                        Once
+                        PowerShell is open, you can copy and paste the commands directly into the window and press
+                        Enter.
+                    </p>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">3. Analyzing Registry Hives and Transaction Logs</h1>
+                    <p class="mb-4">Registry hives (like SYSTEM, SOFTWARE, NTUSER.DAT) hold different parts of the
+                        registry.
+                        Analyzing these hives helps you understand system and user settings. Use tools like the Windows
+                        Event Viewer or Registry Explorer to track changes and monitor activities.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Example PowerShell Command</h2>
+                    <p class="mb-4">To monitor registry changes, use this PowerShell command:</p>
+                    <div class="bg-gray-200 p-4 rounded overflow-x-auto">
+                        <code
+                            class="block whitespace-pre-wrap">Register-WmiEvent -Class Win32_RegistryTreeChangeEvent -Action { Write-Host "Registry change detected!" }</code>
+                    </div>
+                    <p class="mb-4">This command sets up an event that will notify you when changes are detected in the
+                        registry.</p>
+                </section>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

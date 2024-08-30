@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.1.1:Router Security: MAC Address Filtering </title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../../index.html" class="text-[text-[#4c1d95]] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[text-[#4c1d95]] font-semibold">Topic 3 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 3.1</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Router Security: MAC Address Filtering</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Router Security: MAC Address Filtering
+            </div>
+            <div class="p-8">
+                <h1 class="text-2xl font-bold mb-4">Task:</h1>
+                <p class="mb-6">Enhance the security of a router by implementing MAC address filtering to control access
+                    to the network. Follow these steps:</p>
+
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-6">
+                    <h2 class="text-xl font-semibold mb-2">1. Configure MAC Address Filtering</h2>
+                    <p class="mb-4">Log in to your TP-Link router's web interface. You can usually do this by entering
+                        the router's IP address (e.g., <code
+                            class="bg-gray-200 text-gray-800 px-2 py-1 rounded">192.168.0.1</code>) into your web
+                        browser.</p>
+                    <p class="mb-4">Navigate to the MAC Address Filtering section. This can typically be found the
+                        Wireless > Wireless MAC Filtering</p>
+                    <p class="mb-4">Enable MAC Address Filtering and choose the option to allow only specified devices
+                        to connect.</p>
+                    <div class="mt-4">
+                        <img src="/images/mac-address-filtering.png" alt="MAC Address Filtering Configuration"
+                            class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-6">
+                    <h2 class="text-xl font-semibold mb-2">2. Create an Access Control List (ACL)</h2>
+                    <p class="mb-4">In the MAC Address Filtering section, add the MAC addresses of authorized devices.
+                        Each device's MAC address should be entered in the specified format.</p>
+                    <p class="mb-4">Save the settings to update the router's configuration.</p>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md mb-6">
+                    <h2 class="text-xl font-semibold mb-2">3. Test the Configuration</h2>
+                    <p class="mb-4">Attempt to connect unauthorized devices to the network. These devices should be
+                        unable to access the network if the MAC address filtering is correctly configured.</p>
+                    <p class="mb-4">Verify that authorized devices can connect without issues.</p>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

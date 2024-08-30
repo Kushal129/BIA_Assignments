@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2.2.1: ICMP Messages</title>
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 2 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 2.2</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Assignment 2.2.1</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Assignment 2.2.1: ICMP Messages
+            </div>
+            <div class="p-6">
+                <h1 class="text-3xl font-bold mb-6 md:text-4xl text-center text-gray-800">Understanding ICMP Messages
+                </h1>
+
+                <p class="mb-4">
+                    ICMP (Internet Control Message Protocol) is crucial for network diagnostics and error reporting. It
+                    allows devices to communicate status updates and error conditions.
+                </p>
+
+                <div class="bg-purple-100 text-gray-800 p-4 rounded-lg mb-6">
+                    <h2 class="text-xl font-semibold mb-2">1. Echo Request and Echo Reply</h2>
+                    <p>
+                        <strong>Echo Request:</strong> Sent to check the reachability of a device. Commonly used with
+                        the `ping` command.<br>
+                        <strong>Echo Reply:</strong> The response indicating the device is reachable.<br>
+                        <strong>Example:</strong>
+                    </p>
+                    <pre class="bg-gray-900 p-4 rounded-lg"><code class="text-green-400">ping google.com</code></pre>
+                    <p class="mt-2 bg-gray-800 p-4 rounded-lg text-white">
+                        Output: An Echo Reply from `google.com` will indicate the round-trip time.
+                    </p>
+                </div>
+
+                <div class="bg-purple-100 text-gray-800 p-4 rounded-lg mb-6">
+                    <h2 class="text-xl font-semibold mb-2">2. Destination Unreachable</h2>
+                    <p>
+                        Indicates that a packet could not be delivered to its destination. Reasons include unreachable
+                        host, network, or port.<br>
+                        <strong>Example:</strong>
+                    </p>
+                    <pre class="bg-gray-900 p-4 rounded-lg"><code class="text-red-400">traceroute 192.0.2.1</code></pre>
+                    <p class="mt-2 bg-gray-800 p-4 rounded-lg text-white">
+                        Output: You may see "Destination Unreachable" if the network cannot route the packet.
+                    </p>
+                </div>
+
+                <div class="bg-purple-100 text-gray-800 p-4 rounded-lg mb-6">
+                    <h2 class="text-xl font-semibold mb-2">3. Time Exceeded</h2>
+                    <p>
+                        Occurs when a packet's TTL (Time-to-Live) expires before reaching its destination, indicating a
+                        routing loop or long path.<br>
+                        <strong>Example:</strong>
+                    </p>
+                    <pre
+                        class="bg-gray-900 p-4 rounded-lg"><code class="text-yellow-400">ping -t 10 google.com</code></pre>
+                    <p class="mt-2 bg-gray-800 p-4 rounded-lg text-white">
+                        Output: "Time Exceeded" message if the TTL is too short and the packet cannot reach its
+                        destination.
+                    </p>
+                </div>
+
+                <div class="bg-purple-100 text-gray-800 p-4 rounded-lg mb-6">
+                    <h2 class="text-xl font-semibold mb-2">4. Parameter Problem</h2>
+                    <p>
+                        Indicates issues with the packet's IP header parameters, such as invalid options.<br>
+                        <strong>Example:</strong>
+                    </p>
+                    <pre
+                        class="bg-gray-900 p-4 rounded-lg"><code class="text-blue-400">ping -l 65500 google.com</code></pre>
+                    <p class="mt-2 bg-gray-800 p-4 rounded-lg text-white">
+                        Output: May trigger a "Parameter Problem" if the packet has invalid or oversized options.
+                    </p>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Index</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

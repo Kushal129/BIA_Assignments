@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.2.2: IDS vs. IPS and Packet Analysis</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 3 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 3.2</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">IDS vs. IPS and Packet Analysis</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                IDS vs. IPS and Packet Analysis
+            </div>
+            <div class="p-8">
+                <h1 class="text-2xl font-bold mb-4">Comparing IDS and IPS</h1>
+
+                <h2 class="text-xl font-semibold mb-2">Functionalities</h2>
+                <p class="mb-4"><strong>IDS:</strong> Monitors and alerts on suspicious activities without blocking
+                    them. Provides detailed threat detection but requires manual response.</p>
+                <p class="mb-4"><strong>IPS:</strong> Actively prevents threats by blocking malicious traffic in
+                    real-time. Provides proactive protection but may impact network performance.</p>
+
+                <h2 class="text-xl font-semibold mb-2">Deployment Considerations</h2>
+                <p class="mb-4"><strong>IDS:</strong> Placed where it can monitor traffic without affecting network
+                    flow. Integrates with other security systems for monitoring.</p>
+                <p class="mb-4"><strong>IPS:</strong> Typically deployed inline to actively filter traffic. May impact
+                    network performance due to real-time processing.</p>
+
+                <h2 class="text-xl font-semibold mb-2">Effectiveness</h2>
+                <p class="mb-4"><strong>IDS:</strong> Effective for monitoring and alerting but cannot block threats
+                    directly. Useful for detailed analysis and forensic investigations.</p>
+                <p class="mb-4"><strong>IPS:</strong> Provides real-time threat prevention and automated responses. May
+                    generate false positives and require tuning.</p>
+
+                <h1 class="text-2xl font-bold mb-4 mt-8">Network Packet Analysis</h1>
+
+                <h2 class="text-xl font-semibold mb-2">Importance</h2>
+                <p class="mb-4">Packet analysis provides detailed insights into network traffic, aiding IDS/IPS systems
+                    in detecting and responding to threats. It helps in understanding traffic patterns and investigating
+                    incidents.</p>
+
+                <h2 class="text-xl font-semibold mb-2">Advantages and Limitations</h2>
+                <p class="mb-4"><strong>Advantages:</strong> Provides comprehensive traffic visibility, aids in forensic
+                    analysis, and helps detect anomalies.</p>
+                <p class="mb-4"><strong>Limitations:</strong> Can generate large volumes of data, impact network
+                    performance, and produce false positives.</p>
+
+                <h2 class="text-xl font-semibold mb-2">Best Practices</h2>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Selectively capture relevant traffic to reduce data volume.</li>
+                    <li>Use filters to focus on specific types of traffic or sources.</li>
+                    <li>Regularly analyze captured data to identify trends and issues.</li>
+                    <li>Integrate with IDS/IPS and SIEM systems for comprehensive security.</li>
+                    <li>Implement efficient data management practices to handle large volumes of data.</li>
+                </ul>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2.1.1: OSI Model vs. TCP/IP Suite</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="text/javascript" src="/script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+  <div id="nav-placeholder"></div>
+
+  <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+    <ol class="list-reset flex text-purple-700">
+      <li><a href="../../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 2 Assignments</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 2.1</a></li>
+      <li><span class="mx-2">/</span></li>
+      <li><span class="text-gray-600">Assignment 2.1.1</span></li>
+    </ol>
+  </nav>
+
+  <main class="flex justify-center items-center min-h-screen p-4">
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+      <div
+        class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+        Understanding OSI Model and TCP/IP Suite
+      </div>
+      <div class="p-8">
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">OSI Model</h2>
+          <p class="mb-4 text-lg md:text-xl text-gray-700">
+            The OSI Model (Open Systems Interconnection Model) is like a recipe for how data travels over a
+            network. It has 7 layers, each with a specific job, like a factory assembly line.
+          </p>
+
+          <ul class="list-disc list-inside mb-4 text-lg md:text-xl text-gray-700">
+            <li><strong>Layer 1: Physical</strong> - Handles the physical connection (wires, cables).</li>
+            <li><strong>Layer 2: Data Link</strong> - Manages how data is formatted and transferred on the
+              network.</li>
+            <li><strong>Layer 3: Network</strong> - Determines the path for data to travel from source to
+              destination (like a map).</li>
+            <li><strong>Layer 4: Transport</strong> - Ensures data is delivered accurately and in the right
+              order (like a delivery service).</li>
+            <li><strong>Layer 5: Session</strong> - Manages sessions or conversations between devices.</li>
+            <li><strong>Layer 6: Presentation</strong> - Translates data into a format that applications can
+              understand.</li>
+            <li><strong>Layer 7: Application</strong> - The interface where applications access network services
+              (like web browsers).</li>
+          </ul>
+
+          <p class="mb-4 text-lg md:text-xl text-gray-700">
+            **Example Protocols**:
+          <ul class="list-disc list-inside text-lg md:text-xl text-gray-700">
+            <li>Layer 3: IP (Internet Protocol)</li>
+            <li>Layer 4: TCP (Transmission Control Protocol)</li>
+            <li>Layer 7: HTTP (HyperText Transfer Protocol)</li>
+          </ul>
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">TCP/IP Suite</h2>
+          <p class="mb-4 text-lg md:text-xl text-gray-700">
+            The TCP/IP Suite is like a more modern set of instructions for how data travels over the internet.
+            It has 4 layers, which are simpler than the OSI Model.
+          </p>
+          <ul class="list-disc list-inside mb-4 text-lg md:text-xl text-gray-700">
+            <li><strong>Layer 1: Network Interface (Link)</strong> - Combines the Physical and Data Link layers of the
+              OSI
+              Model.
+              Handles how data is sent over a local network.</li>
+            <li><strong>Layer 2: Internet</strong> - Manages the delivery of data across different networks
+              (like routing).</li>
+            <li><strong>Layer 3: Transport</strong> - Ensures data is correctly sent and received (like TCP in
+              the OSI Model).</li>
+            <li><strong>Layer 4: Application</strong> - Combines the Session, Presentation, and Application
+              layers of the OSI Model. Handles network applications and services.</li>
+          </ul>
+
+          <p class="mb-4 text-lg md:text-xl text-gray-700">
+            **Example Protocols**:
+          <ul class="list-disc list-inside text-lg md:text-xl text-gray-700">
+            <li>Layer 2: Ethernet, ARP (Address Resolution Protocol)</li>
+            <li>Layer 2: IP (Internet Protocol)</li>
+            <li>Layer 3: TCP (Transmission Control Protocol), UDP (User Datagram Protocol)</li>
+            <li>Layer 4: HTTP (HyperText Transfer Protocol), FTP (File Transfer Protocol)</li>
+          </ul>
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">Comparison</h2>
+          <p class="mb-4 text-lg md:text-xl text-gray-700">
+            Here's a simple way to compare the OSI Model and TCP/IP Suite:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- OSI Model Card -->
+            <div class="bg-blue-50 border border-blue-300 rounded-lg p-6">
+              <h3 class="text-xl font-semibold mb-2 text-blue-800">OSI Model</h3>
+              <p class="text-base md:text-lg text-gray-700">
+                <strong>Layers:</strong> 7 layers in total, each with specific roles.
+              <ul class="list-disc list-inside ml-4 text-gray-600">
+                <li>Physical</li>
+                <li>Data Link</li>
+                <li>Network</li>
+                <li>Transport</li>
+                <li>Session</li>
+                <li>Presentation</li>
+                <li>Application</li>
+              </ul>
+              </p>
+              <p class="mt-4 text-base md:text-lg text-gray-700">
+                <strong>Complexity:</strong> More detailed with separate layers for each function.
+              </p>
+              <p class="mt-4 text-base md:text-lg text-gray-700">
+                <strong>Functionality:</strong> Provides a detailed guide on how data travels over a network.
+              </p>
+            </div>
+            <!-- TCP/IP Suite Card -->
+            <div class="bg-green-50 border border-green-300 rounded-lg p-6">
+              <h3 class="text-xl font-semibold mb-2 text-green-800">TCP/IP Suite</h3>
+              <p class="text-base md:text-lg text-gray-700">
+                <strong>Layers:</strong> 4 layers in total, combining some of the OSI Model layers.
+              <ul class="list-disc list-inside ml-4 text-gray-600">
+                <li>Link</li>
+                <li>Internet</li>
+                <li>Transport</li>
+                <li>Application</li>
+              </ul>
+              </p>
+              <p class="mt-4 text-base md:text-lg text-gray-700">
+                <strong>Complexity:</strong> More straightforward with combined layers.
+              </p>
+              <p class="mt-4 text-base md:text-lg text-gray-700">
+                <strong>Functionality:</strong> Used more commonly in practice today for real-world networks.
+              </p>
+            </div>
+          </div>
+          <p class="mt-8 text-lg md:text-xl text-gray-700">
+            <strong>Example:</strong> If you’re sending an email, the OSI Model would break it into detailed steps,
+            while
+            the TCP/IP Suite simplifies these steps into fewer layers.
+          </p>
+        </section>
+
+        <div class="mt-8 text-center">
+          <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to Assignments</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+</body>
+
+</html>
