@@ -35,11 +35,3 @@ body::-webkit-scrollbar-thumb:hover {
     z-index: 9999;
     transition: opacity 0.3s ease-in-out;
 }
-
-.hidden {
-    opacity: 0;
-}
-
-.visible {
-    opacity: 1;
-}
