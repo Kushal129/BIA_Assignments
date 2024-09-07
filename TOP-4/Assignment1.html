@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4.1 - Linux Fundamentals</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 4 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Assignment 3</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Assignment 4.1.3
+            </div>
+            <div class="p-8">
+                <h1 class="text-3xl font-bold mb-6 md:text-4xl text-center text-gray-800">Fundamentals of Unix and Linux
+                </h1>
+                <p class="mb-6 text-lg md:text-xl text-gray-700">
+                    Unix and Linux are fundamental operating systems that have shaped the modern computing world. They
+                    share common
+                    design principles but also have distinct characteristics. Let's explore their history, design, and
+                    key features.
+                </p>
+
+                <!-- Unix -->
+                <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">History of Unix</h2>
+                <p class="mb-4 text-lg md:text-xl text-gray-700">
+                    Unix was developed in the 1960s at AT&T Bell Labs. It became widely known for its <span
+                        class="font-bold">simplicity, portability, and
+                        multi-user capabilities</span>. Over the years, it has evolved, influencing the creation of many
+                    other systems, including Linux.
+                </p>
+
+                <!-- Linux -->
+                <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">History of Linux</h2>
+                <p class="mb-4 text-lg md:text-xl text-gray-700">
+                    Linux was created by Linus Torvalds in 1991, inspired by Unix but developed as an open-source
+                    alternative. Today, Linux powers
+                    everything from servers to smartphones, with various distributions offering flexibility for
+                    different needs.
+                </p>
+
+                <hr class="my-6 border-gray-300">
+
+                <!-- Design Principles -->
+                <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">Design Principles</h2>
+                <p class="mb-4 text-lg md:text-xl text-gray-700">
+                    Both Unix and Linux are built on <span class="font-bold">modularity, multitasking, and multi-user
+                        support</span>. These systems emphasize
+                    stability, security, and flexibility. The command-line interface (CLI) plays a crucial role,
+                    allowing users to perform powerful operations
+                    efficiently.
+                </p>
+
+                <!-- Key Features -->
+                <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">Key Features</h2>
+                <ul class="list-disc list-inside text-lg md:text-xl text-gray-700 mb-4">
+                    <li>Multi-user environment</li>
+                    <li>Strong security and permissions</li>
+                    <li>Command-line interface (CLI)</li>
+                    <li>File system hierarchy</li>
+                    <li>Package management (for Linux)</li>
+                </ul>
+
+                <hr class="my-6 border-gray-300">
+
+                <!-- Comparison of Unix and Linux -->
+                <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">Comparison of Unix and Linux</h2>
+                <table class="min-w-full bg-white border border-gray-300 mb-6 text-lg md:text-xl">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="py-2 px-4 text-left font-semibold text-gray-800">Aspect</th>
+                            <th class="py-2 px-4 text-left font-semibold text-gray-800">Unix</th>
+                            <th class="py-2 px-4 text-left font-semibold text-gray-800">Linux</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4">Licensing</td>
+                            <td class="py-2 px-4">Proprietary (paid licenses, not freely distributed)</td>
+                            <td class="py-2 px-4">Open-source (freely available with community support)</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="py-2 px-4">Architecture</td>
+                            <td class="py-2 px-4">Primarily monolithic kernel (with limited modularity)</td>
+                            <td class="py-2 px-4">Monolithic kernel with modular features (supports dynamic loading of
+                                modules)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Distributions</td>
+                            <td class="py-2 px-4">AIX, HP-UX, Solaris, BSD variants</td>
+                            <td class="py-2 px-4">Ubuntu, Fedora, CentOS, Debian, Arch Linux, RHEL</td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="py-2 px-4">Command Line Interface (CLI)</td>
+                            <td class="py-2 px-4">Bourne Shell (sh), KornShell (ksh), C Shell (csh)</td>
+                            <td class="py-2 px-4">Bash (default), Zsh, Fish, and other customizable shells</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4">Usage</td>
+                            <td class="py-2 px-4">Mainly used in large enterprises and legacy systems</td>
+                            <td class="py-2 px-4">Used in servers, desktops, mobile devices (Android), embedded systems
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-100">
+                            <td class="py-2 px-4">Development</td>
+                            <td class="py-2 px-4">Developed in the 1970s, still used but not actively updated by the
+                                community</td>
+                            <td class="py-2 px-4">Actively developed with frequent community contributions and updates
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <hr class="my-6 border-gray-300">
+
+                <!-- Virtualization Technologies -->
+                <h2 class="text-2xl font-semibold mb-4 md:text-3xl text-gray-800">Virtualization and Experimentation
+                </h2>
+                <p class="mb-4 text-lg md:text-xl text-gray-700">
+                    Virtualization tools like <span class="font-semibold text-green-600">VirtualBox</span> allow users
+                    to experiment with different Unix and Linux environments without
+                    the risk of damaging their main systems. This is especially useful for <span
+                        class="font-bold">education, software development, and system administration</span>.
+                </p>
+                <h3 class="text-lg font-semibold mb-2 md:text-2xl text-gray-800">Advantages of Virtualization:</h3>
+                <ul class="list-disc list-inside text-lg md:text-xl text-gray-700 mb-4">
+                    <li>Safe environment for testing</li>
+                    <li>Quick setup for multiple OS</li>
+                    <li>Cost-effective experimentation</li>
+                    <li>Snapshot and recovery options</li>
+                </ul>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Index</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>
