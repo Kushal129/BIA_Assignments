@@ -1,1 +1,131 @@
-Discuss the significance of SAM files and system files in Windows environments for user authentication and system configuration. Explain the process of password hashing in Windows, including the use of cryptographic algorithms such as NTLM and Kerberos. Evaluate the strengths and weaknesses of password hashing techniques used in Windows authentication mechanisms and propose measures for enhancing password security and mitigating password-related attacks.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.3.3: SAM Files, Password Hashing, and Security</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="/index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 3 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 3.3</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">SAM Files, Password Hashing, and Security</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-2xl font-bold md:text-3xl">
+                SAM Files, Password Hashing, and Security
+            </div>
+            <div class="p-8">
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">1. Significance of SAM Files and System Files</h1>
+                    <p class="mb-4">In Windows environments, SAM (Security Accounts Manager) files and system files play
+                        critical roles in user authentication and system configuration:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">SAM Files</h2>
+                    <p class="mb-4">The SAM file, located at <code>C:\Windows\System32\config\SAM</code>, stores user
+                        account information and hashed passwords. This file is crucial for user authentication because
+                        it verifies credentials during the login process. It is protected by the system to prevent
+                        unauthorized access, but if compromised, it can be a significant security risk.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">System Files</h2>
+                    <p class="mb-4">System files, like <code>System32</code> and <code>Windows</code> configuration
+                        files, contain critical information about the operating system's configuration and state. They
+                        are essential for system stability and configuration, affecting how the OS manages hardware and
+                        software resources.</p>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">2. Password Hashing in Windows</h1>
+                    <p class="mb-4">Windows uses password hashing to securely store user passwords. The process involves
+                        converting plain-text passwords into hashed values using cryptographic algorithms:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Hashing Process</h2>
+                    <p class="mb-4">When a user sets or changes their password, Windows hashes it using a cryptographic
+                        algorithm and stores the hash in the SAM file. During login, the entered password is hashed
+                        again, and the resulting hash is compared with the stored hash to verify the user's credentials.
+                    </p>
+
+                    <h2 class="text-xl font-semibold mb-2">Cryptographic Algorithms</h2>
+                    <p class="mb-4">Windows primarily uses the following hashing algorithms:</p>
+
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>NTLM (NT LAN Manager):</strong> An older hashing algorithm that uses a combination
+                            of MD4 and DES encryption. It is considered weak due to vulnerabilities and has been largely
+                            replaced by more secure methods.</li>
+                        <li><strong>Kerberos:</strong> A more secure authentication protocol that uses tickets and
+                            strong encryption methods, including AES (Advanced Encryption Standard). It is the preferred
+                            method for modern Windows environments due to its improved security features.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">3. Evaluating Password Hashing Techniques</h1>
+                    <p class="mb-4">Each password hashing technique has its strengths and weaknesses:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Strengths</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>NTLM:</strong> Provides a basic level of security and is compatible with older
+                            systems.</li>
+                        <li><strong>Kerberos:</strong> Offers robust security through strong encryption, mitigates
+                            replay attacks, and is suitable for modern enterprise environments.</li>
+                    </ul>
+
+                    <h2 class="text-xl font-semibold mb-2">Weaknesses</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>NTLM:</strong> Vulnerable to various attacks, such as pass-the-hash and brute-force
+                            attacks. It is less secure compared to newer methods.</li>
+                        <li><strong>Kerberos:</strong> Requires careful implementation and configuration to avoid
+                            potential security issues, such as ticket manipulation and key distribution problems.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">4. Enhancing Password Security</h1>
+                    <p class="mb-4">To enhance password security and mitigate attacks, consider the following measures:
+                    </p>
+
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>Use Strong Passwords:</strong> Enforce password complexity requirements, such as a
+                            mix of letters, numbers, and symbols, to reduce vulnerability to attacks.</li>
+                        <li><strong>Implement Multi-Factor Authentication (MFA):</strong> Add an additional layer of
+                            security by requiring a second form of authentication, such as a mobile app or hardware
+                            token.</li>
+                        <li><strong>Regularly Update Password Hashing Algorithms:</strong> Transition to more secure
+                            hashing algorithms and authentication protocols as they become available.</li>
+                        <li><strong>Monitor and Audit Access:</strong> Regularly review and audit user accounts and
+                            access logs to detect and respond to suspicious activities promptly.</li>
+                        <li><strong>Educate Users:</strong> Provide training on recognizing phishing attempts and using
+                            secure passwords to prevent social engineering attacks.</li>
+                    </ul>
+                </section>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

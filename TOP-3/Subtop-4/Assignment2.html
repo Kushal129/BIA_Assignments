@@ -1,1 +1,143 @@
-Explain the fundamentals of cloud computing, including its key characteristics, service models (IaaS, PaaS, SaaS), and deployment models (public, private, hybrid). Discuss the unique security challenges and considerations associated with cloud computing, such as data privacy, compliance, shared responsibility model, and multi-tenancy. Analyze the role of cloud security controls and technologies in mitigating risks and ensuring the confidentiality, integrity, and availability of cloud-based resources.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.4.2: Cloud Computing Fundamentals</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="/index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 3 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 3.4</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Cloud Computing Fundamentals</span></li>
+        </ol>
+    </nav>
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Cloud Computing Fundamentals
+            </div>
+            <div class="p-8">
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">1. What is Cloud Computing?</h1>
+                    <p class="mb-4">Cloud computing allows you to use computing resources like servers, storage, and
+                        applications over the internet. Instead of owning physical hardware, you access and manage these
+                        resources online.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Key Characteristics of Cloud Computing</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>On-Demand Self-Service:</strong> You can access computing resources whenever you
+                            need them without needing human interaction.</li>
+                        <li><strong>Broad Network Access:</strong> Resources are available over the network and can be
+                            accessed from various devices.</li>
+                        <li><strong>Resource Pooling:</strong> Cloud providers pool resources to serve multiple
+                            customers, sharing physical and virtual resources.</li>
+                        <li><strong>Rapid Elasticity:</strong> Resources can be scaled up or down quickly based on
+                            demand.</li>
+                        <li><strong>Measured Service:</strong> Resource usage is monitored and billed based on
+                            consumption.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">2. Service Models</h1>
+                    <p class="mb-4">Cloud computing offers different service models to meet various needs:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Infrastructure as a Service (IaaS)</h2>
+                    <p class="mb-4">IaaS provides virtualized computing resources over the internet. You can rent
+                        virtual servers, storage, and networks, and you manage the operating systems and applications.
+                    </p>
+
+                    <h2 class="text-xl font-semibold mb-2">Platform as a Service (PaaS)</h2>
+                    <p class="mb-4">PaaS provides a platform allowing customers to develop, run, and manage applications
+                        without dealing with the underlying infrastructure. It includes development tools, databases,
+                        and runtime environments.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Software as a Service (SaaS)</h2>
+                    <p class="mb-4">SaaS delivers software applications over the internet. Users access software through
+                        a web browser, and the provider manages the infrastructure and application updates.</p>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">3. Deployment Models</h1>
+                    <p class="mb-4">Cloud computing offers different deployment models based on how the cloud resources
+                        are accessed and managed:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Public Cloud</h2>
+                    <p class="mb-4">In a public cloud, services are provided over the internet and shared among multiple
+                        customers. Examples include AWS and Microsoft Azure.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Private Cloud</h2>
+                    <p class="mb-4">A private cloud is used exclusively by one organization. It can be hosted
+                        on-premises or by a third party, offering more control and security.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Hybrid Cloud</h2>
+                    <p class="mb-4">A hybrid cloud combines public and private clouds, allowing data and applications to
+                        be shared between them. This offers flexibility and more deployment options.</p>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">4. Security Challenges and Considerations</h1>
+                    <p class="mb-4">Cloud computing presents unique security challenges that need to be addressed:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Data Privacy</h2>
+                    <p class="mb-4">Ensuring that data is kept private and secure, especially when stored in the cloud,
+                        is crucial. Make sure to understand how your provider handles data privacy.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Compliance</h2>
+                    <p class="mb-4">Adhere to legal and regulatory requirements for data protection and privacy.
+                        Different regions have different regulations.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Shared Responsibility Model</h2>
+                    <p class="mb-4">Cloud security is a shared responsibility between the provider and the customer.
+                        Providers secure the infrastructure, while customers secure their applications and data.</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Multi-Tenancy</h2>
+                    <p class="mb-4">In a cloud environment, multiple customers share the same physical resources.
+                        Ensuring isolation and security of data among different tenants is essential.</p>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">5. Cloud Security Controls and Technologies</h1>
+                    <p class="mb-4">Cloud security controls and technologies help mitigate risks and protect cloud-based
+                        resources:</p>
+
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>Encryption:</strong> Encrypt data both in transit and at rest to protect against
+                            unauthorized access.</li>
+                        <li><strong>Access Control:</strong> Implement strong access controls and authentication
+                            mechanisms to ensure that only authorized users can access resources.</li>
+                        <li><strong>Firewalls and Security Groups:</strong> Use firewalls and security groups to control
+                            and monitor network traffic.</li>
+                        <li><strong>Regular Audits:</strong> Conduct regular security audits and vulnerability
+                            assessments to identify and address potential risks.</li>
+                    </ul>
+                </section>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

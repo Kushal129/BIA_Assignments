@@ -1,9 +1,133 @@
-Cloud Security Assessment
+<!DOCTYPE html>
+<html lang="en">
 
-Task:
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.4.1: Cloud Security Assessment</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
 
-Conduct a comprehensive security assessment of a cloud computing environment to identify vulnerabilities, assess risks, and recommend security controls. Follow these steps:
+<body class="bg-gray-100 font-sans leading-relaxed">
 
-– Select a cloud service provider (e.g., AWS, Azure, Google Cloud) and review its documentation and security features.
+    <div id="nav-placeholder"></div>
 
-– Utilize cloud security tools (e.g., AWS Inspector, Azure Security Center) to scan for vulnerabilities and misconfigurations in cloud resources.
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="/index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 3 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 3.4</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Cloud Security Assessment</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Cloud Security Assessment
+            </div>
+            <div class="p-8">
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">1. Choose a Cloud Provider</h1>
+                    <p class="mb-4">Select a cloud service provider to assess. We’ll use AWS (Amazon Web Services) as an
+                        example. Each provider has unique features to help secure your environment:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">AWS (Amazon Web Services)</h2>
+                    <p class="mb-4">AWS offers various tools to protect your cloud setup. Key security features include:
+                    </p>
+
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>Identity and Access Management (IAM):</strong> Manages who can access AWS resources.
+                        </li>
+                        <li><strong>AWS CloudTrail:</strong> Tracks API activity across your AWS setup.</li>
+                        <li><strong>AWS Config:</strong> Monitors changes and compliance of AWS resources.</li>
+                        <li><strong>AWS Shield:</strong> Guards against DDoS (Distributed Denial of Service) attacks.
+                        </li>
+                        <li><strong>AWS WAF (Web Application Firewall):</strong> Defends against common web threats.
+                        </li>
+                    </ul>
+
+                    <p class="mb-4">For more details, visit the <a href="https://aws.amazon.com/security/"
+                            class="text-purple-600 hover:underline">AWS Security Documentation</a>.</p>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">2. Review Security Features</h1>
+                    <p class="mb-4">Check out the security features provided by your cloud provider. Make sure you
+                        understand how to use these features to protect your cloud environment:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Key Features to Review</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>Encryption:</strong> Ensure your data is encrypted both at rest and during transfer.
+                        </li>
+                        <li><strong>Access Control:</strong> Review user roles and permissions to ensure proper access.
+                        </li>
+                        <li><strong>Logging and Monitoring:</strong> Confirm that logging and monitoring are active for
+                            all important resources.</li>
+                        <li><strong>Network Security:</strong> Check security groups and network ACLs to safeguard
+                            network traffic.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">3. Use Cloud Security Tools</h1>
+                    <p class="mb-4">Utilize tools to find and fix security issues in your cloud setup. For AWS, consider
+                        these tools:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">AWS Security Tools</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>AWS Inspector:</strong> Automates security assessments to improve your AWS
+                            applications. It scans for vulnerabilities and provides detailed reports.</li>
+                        <li><strong>AWS Security Hub:</strong> Offers an overview of security alerts and posture across
+                            AWS accounts. It integrates with other AWS services and third-party tools.</li>
+                        <li><strong>AWS Config:</strong> Monitors resource configurations and compares them against best
+                            practices.</li>
+                    </ul>
+
+                    <p class="mb-4">For guidance on these tools, check their documentation:</p>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><a href="https://docs.aws.amazon.com/inspector/latest/userguide/what-is-inspector.html"
+                                class="text-purple-600 hover:underline">AWS Inspector Documentation</a></li>
+                        <li><a href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"
+                                class="text-purple-600 hover:underline">AWS Security Hub Documentation</a></li>
+                        <li><a href="https://docs.aws.amazon.com/config/latest/developerguide/what-is-config.html"
+                                class="text-purple-600 hover:underline">AWS Config Documentation</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="text-2xl font-bold mb-4">4. Assess Risks and Recommend Controls</h1>
+                    <p class="mb-4">After scanning and reviewing, assess the identified risks and suggest security
+                        measures:</p>
+
+                    <h2 class="text-xl font-semibold mb-2">Risk Assessment and Recommendations</h2>
+                    <ul class="list-disc pl-5 mb-4">
+                        <li><strong>Identify Vulnerabilities:</strong> List vulnerabilities found and assess their
+                            impact.</li>
+                        <li><strong>Prioritize Risks:</strong> Rank risks by severity and potential impact.</li>
+                        <li><strong>Recommend Controls:</strong> Suggest specific actions to address risks, like
+                            applying patches, adjusting permissions, or enabling encryption.</li>
+                        <li><strong>Follow Best Practices:</strong> Adhere to cloud security best practices, such as the
+                            CIS AWS Foundations Benchmark or NIST guidelines.</li>
+                    </ul>
+                </section>
+
+                <div class="mt-8 text-center">
+                    <a href="Assignments.html" class="text-lg md:text-xl text-purple-600 hover:underline">Back to
+                        Assignments</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+
+</html>
