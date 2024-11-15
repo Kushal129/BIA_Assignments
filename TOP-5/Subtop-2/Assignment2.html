@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.2.2: Packet Crafting in Network Security</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md lg:text-md text-sm">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 5 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 5.2</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Packet Crafting in Network Security</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Packet Crafting in Network Security
+            </div>
+            <div class="p-8">
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Understanding Packet Crafting:</h2>
+                    <p class="text-base">
+                        <strong>Packet crafting</strong> is the process of manually creating and modifying network
+                        packets to understand, test, or exploit networks. It's a powerful technique in network security,
+                        often used in <strong>penetration testing</strong> and vulnerability assessments to simulate
+                        attacks and check for weak points in a network.
+                    </p>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Objectives and Use Cases of Packet Crafting:</h2>
+                    <p class="text-base mb-2">
+                        The goal of packet crafting is to gain a deeper understanding of how networks function and to
+                        identify potential vulnerabilities. Here are some common use cases:
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><strong>Network Reconnaissance:</strong> Custom packets can be crafted to gather information
+                            about the target network, such as open ports and services.</li>
+                        <li><strong>Vulnerability Assessment:</strong> By creating specific packets that exploit known
+                            vulnerabilities, security professionals can identify weaknesses in systems.</li>
+                        <li><strong>Exploitation:</strong> In more advanced cases, crafted packets are used to exploit
+                            vulnerabilities and gain unauthorized access.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Example: Crafting Custom Packets with <code>hping3</code>
+                    </h2>
+                    <p class="text-base">
+                        One of the popular tools used for packet crafting is <strong>hping3</strong>, which allows us to
+                        manually construct packets for various purposes. Here’s an example of how you might create a
+                        simple SYN packet to perform a port scan:
+                    </p>
+
+                    <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                        <strong>Example Command (SYN Scan):</strong>
+                        <pre><code>hping3 -S <target-ip> -p <port-number></code></pre>
+                    </div>
+
+                    <p class="text-base">
+                        In this example, the <code>-S</code> flag indicates a SYN packet, and the packet will be sent to
+                        the specified <code>port-number</code> on the target machine. This is similar to what tools like
+                        Nmap do, but with more control over the exact structure of the packet.
+                    </p>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Ethical Considerations and Legal Implications:</h2>
+                    <p class="text-base mb-2">
+                        While packet crafting can be an essential part of security testing, it's critical to understand
+                        the ethical and legal responsibilities involved:
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><strong>Responsible Use:</strong> Packet crafting should only be performed on systems and
+                            networks you are authorized to test. Testing without permission is illegal and unethical.
+                        </li>
+                        <li><strong>Lawful Use of Tools:</strong> Always follow local laws and organizational policies
+                            when using packet crafting tools. Unauthorized use can lead to legal penalties.</li>
+                        <li><strong>Guidelines for Ethical Hacking:</strong> Follow best practices such as the <a
+                                href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/">Certified
+                                Ethical Hacker (CEH)</a> framework, which outlines how to perform penetration testing in
+                            a lawful and ethical manner.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

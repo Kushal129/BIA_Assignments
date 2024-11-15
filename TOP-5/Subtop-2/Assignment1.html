@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.2.1: Port Scanning with Nmap</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md lg:text-md text-sm">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 5 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 5.2</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Port Scanning with Nmap</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Port Scanning with Nmap
+            </div>
+            <div class="p-8">
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Task:</h2>
+                    <p class="text-base">
+                        Conduct a series of port scanning activities using <strong>Nmap</strong>, a versatile network
+                        scanning
+                        tool, to discover open ports and services on target systems. The goal is to understand the
+                        scanning
+                        process and identify potential vulnerabilities in target networks.
+                    </p>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Step-by-Step Instructions:</h2>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">1. Install Nmap:</h3>
+                        <p class="text-base mb-2">
+                            Begin by installing Nmap on your system. Nmap is available for different platforms like
+                            Linux,
+                            Windows, and macOS. Familiarize yourself with the Nmap command-line interface and basic scan
+                            options.
+                        </p>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>Command to install Nmap (on Linux):</strong>
+                            <pre><code>sudo apt install nmap</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">2. Perform Basic Scans:</h3>
+                        <p class="text-base mb-2">
+                            Start with some simple scans to get used to how Nmap works. Perform scans on target IP
+                            addresses
+                            or
+                            ranges. Here are a few types to try:
+                        </p>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>TCP SYN Scan (Stealth Scan):</strong>
+                            <pre><code>nmap -sS &lt;target-ip&gt;</code></pre>
+                        </div>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>TCP Connect Scan:</strong>
+                            <pre><code>nmap -sT &lt;target-ip&gt;</code></pre>
+                        </div>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>UDP Scan:</strong>
+                            <pre><code>nmap -sU &lt;target-ip&gt;</code></pre>
+                        </div>
+
+                        <p class="text-base">
+                            Analyze the output to identify open ports and the services running on them. This helps in
+                            spotting
+                            potential weak points.
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">3. Analyze Results:</h3>
+                        <p class="text-base">
+                            After each scan, take note of which ports are open and what services are running. Look for
+                            any
+                            unusual services that might indicate vulnerabilities. For example, open ports like 21 (FTP)
+                            or
+                            23
+                            (Telnet) can suggest outdated or insecure configurations.
+                        </p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">4. Advanced Features of Nmap:</h3>
+                        <p class="text-base mb-2">
+                            Explore some of the advanced features that Nmap offers to enhance your scans:
+                        </p>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>OS Detection:</strong> Identify the operating system of the target system.
+                            <pre><code>nmap -O &lt;target-ip&gt;</code></pre>
+                        </div>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>Service Version Detection:</strong> Find the versions of services running on the
+                            open
+                            ports.
+                            <pre><code>nmap -sV &lt;target-ip&gt;</code></pre>
+                        </div>
+
+                        <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                            <strong>Nmap Scripting Engine (NSE):</strong> Use powerful scripts to probe further for
+                            vulnerabilities.
+                            <pre><code>nmap --script vuln &lt;target-ip&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="text-xl font-semibold mb-2">5. Document the Process:</h3>
+                        <p class="text-base mb-2">
+                            Keep track of the following details:
+                        </p>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Scan Types Used: Record each type of scan (e.g., TCP SYN, UDP).</li>
+                            <li>Target Selection: Mention why you chose specific IPs or ranges.</li>
+                            <li>Scan Findings: Summarize the open ports, services, OS details, and any potential
+                                vulnerabilities
+                                found.</li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

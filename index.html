@@ -11,23 +11,23 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-gray-100 font-sans leading-normal tracking-normal overflow-x-hidden">
 
     <!-- Navigation Bar -->
     <div id="nav-placeholder"></div>
 
     <!-- Breadcrumb -->
-    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md">
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md lg:text-md text-sm">
         <ol class="list-reset flex text-purple-700">
             <li><a href="/" class="text-[#4c1d95] font-semibold">Home</a></li>
         </ol>
     </nav>
 
     <!-- Topics Section -->
-    <main id="topics" class="w-full lg:h-screen my-16">
-        <div class="container mx-auto px-6">
+    <main id="topics" class="w-full my-16">
+        <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Available Assignment Topics</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <a href="./TOP-1/Assignments.html"
                     class="block bg-white shadow-lg rounded-lg p-6 text-center hover:bg-gray-100 transition">
                     <img src="https://www.cisco.com/c/en/us/products/security/what-is-information-security-infosec/jcr:content/Grid/subcategory_atl_8acc/layout-subcategory-atl/anchor_info_127c.img.png/1648845977528.png"
@@ -56,12 +56,27 @@
                     <h3 class="text-xl font-semibold mb-2">Linux Fundamentals</h3>
                     <p class="text-gray-600">Click to view assignments</p>
                 </a>
+                <a href="./TOP-5/Assignments.html"
+                    class="block bg-white shadow-lg rounded-lg p-6 text-center hover:bg-gray-100 transition">
+                    <img src="https://assets.tryhackme.com/img/modules/intro-to-networking.png" alt="Network Exploitation"
+                        class="mx-auto mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Network Exploitation</h3>
+                    <p class="text-gray-600">Click to view assignments</p>
+                </a>
             </div>
         </div>
     </main>
 
-
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-purple-900 to-purple-400 text-white py-8" id="footer">
+        <div class="container mx-auto px-4 flex flex-col justify-between items-center">
+            <p class="text-sm md:text-base mb-4 text-center">&copy; 2024 Assignment Dashboard. All rights reserved KHP.</p>
+            <div class="flex space-x-4">
+                <a href="./Contact.html" class="text-white hover:underline">Contact</a>
+                <a href="https://smartlearningwithkhp.netlify.app/" target="_blank" class="text-white hover:underline">Website</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

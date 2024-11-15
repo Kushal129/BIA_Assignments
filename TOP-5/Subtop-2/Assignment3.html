@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.2.3: Role of Port Scanning in Network Security</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed">
+
+    <div id="nav-placeholder"></div>
+
+    <nav class="bg-gray-100 p-4 rounded-md w-full shadow-md lg:text-md text-sm">
+        <ol class="list-reset flex text-purple-700">
+            <li><a href="../index.html" class="text-[#4c1d95] font-semibold">Home</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Topic 5 Assignments</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><a href="./Assignments.html" class="text-[#4c1d95] font-semibold">Assignment 5.2</a></li>
+            <li><span class="mx-2">/</span></li>
+            <li><span class="text-gray-600">Role of Port Scanning in Network Security</span></li>
+        </ol>
+    </nav>
+
+    <main class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+
+            <div
+                class="bg-gradient-to-r from-purple-500 to-purple-900 text-white text-center py-4 text-3xl font-bold md:text-4xl">
+                Role of Port Scanning in Network Security
+            </div>
+            <div class="p-8">
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Understanding Port Scanning:</h2>
+                    <p class="text-base">
+                        <strong>Port scanning</strong> is a fundamental method used in network security assessments to
+                        detect open ports, identify services, and map the structure of a network. It's an essential part
+                        of vulnerability management because identifying which ports are open helps to understand where
+                        potential security risks might exist.
+                    </p>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Objectives and Methodologies of Port Scanning:</h2>
+                    <p class="text-base mb-2">
+                        The main objectives of port scanning include:
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><strong>Detecting Open Ports:</strong> By scanning, you can discover which ports are
+                            open and accessible from the internet.</li>
+                        <li><strong>Identifying Services:</strong> Each open port may be running a specific service
+                            (like HTTP or FTP), and scanning helps identify which services are active.</li>
+                        <li><strong>Mapping Network Topologies:</strong> Port scanning can also reveal how the network
+                            is structured, providing insights into potential attack surfaces.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Common Port Scanning Techniques:</h2>
+                    <p class="text-base">
+                        There are different methods of port scanning, each with its advantages and limitations. Here’s a
+                        breakdown of three common techniques:
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><strong>TCP SYN Scanning:</strong> This is a stealthier method where the scanner sends a SYN
+                            (synchronize) packet to a port. If a SYN-ACK is received, the port is considered open. This
+                            technique is less likely to be logged by firewalls.</li>
+                        <li><strong>TCP Connect Scanning:</strong> This method completes the TCP handshake with the
+                            target port. While more reliable, it is easier to detect by security systems.</li>
+                        <li><strong>UDP Scanning:</strong> This technique scans for open UDP ports. Since UDP is
+                            connectionless, it can be slower and more difficult to perform, but it’s essential for
+                            finding services like DNS or SNMP running on UDP.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Example: TCP SYN Scan using <code>nmap</code></h2>
+                    <p class="text-base">
+                        A simple example of TCP SYN scanning using <strong>nmap</strong> is shown below. This scan
+                        attempts to detect open ports on a target machine:
+                    </p>
+
+                    <div class="bg-gray-100 p-4 rounded-lg text-sm">
+                        <strong>Example Command (SYN Scan):</strong>
+                        <pre><code>nmap -sS <target-ip></code></pre>
+                    </div>
+
+                    <p class="text-base">
+                        The <code>-sS</code> option tells <strong>nmap</strong> to perform a SYN scan. This type of scan
+                        is often used because it's fast and can be less noticeable to security systems.
+                    </p>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Advantages and Limitations:</h2>
+                    <p class="text-base">
+                        Each type of port scan has its own pros and cons:
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><strong>Advantages:</strong> Port scanning helps you discover potential vulnerabilities,
+                            understand network configurations, and identify unauthorized services.</li>
+                        <li><strong>Limitations:</strong> Some scans, like UDP scans, can be slow or inefficient, and
+                            advanced firewalls may block or log your scan attempts.</li>
+                    </ul>
+                </section>
+
+                <section class="mb-6">
+                    <h2 class="text-2xl font-semibold mb-4">Ethical Considerations and Legal Implications:</h2>
+                    <p class="text-base mb-2">
+                        While port scanning is essential for network security assessments, it's crucial to conduct it
+                        ethically and within legal boundaries:
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li><strong>Responsible Use:</strong> Only perform scans on networks or systems you have
+                            explicit permission to assess. Scanning without permission is illegal and unethical.</li>
+                        <li><strong>Respecting Privacy:</strong> Follow ethical hacking principles, such as those
+                            outlined by the <a href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/"
+                                target="_blank">Certified Ethical Hacker (CEH)</a> framework, and respect the privacy
+                            and security of others.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
